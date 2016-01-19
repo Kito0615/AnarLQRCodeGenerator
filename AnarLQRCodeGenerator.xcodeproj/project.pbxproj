@@ -13,6 +13,10 @@
 		8A5A8FFD1C4CCF240043E724 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A8FFB1C4CCF240043E724 /* MainMenu.xib */; };
 		8A5A90081C4CCF240043E724 /* AnarLQRCodeGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A90071C4CCF240043E724 /* AnarLQRCodeGeneratorTests.m */; };
 		8A5A90131C4CCF240043E724 /* AnarLQRCodeGeneratorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A90121C4CCF240043E724 /* AnarLQRCodeGeneratorUITests.m */; };
+		8A5A90211C4CD04E0043E724 /* Convert.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A90201C4CD04E0043E724 /* Convert.png */; };
+		8A5A902A1C4CD17A0043E724 /* NSImage+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A90291C4CD17A0043E724 /* NSImage+QRCode.m */; };
+		8A5A902C1C4CD5690043E724 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A902B1C4CD5690043E724 /* AVFoundation.framework */; };
+		8A9C2D271C4CE6CC0064227B /* export.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C2D261C4CE6CC0064227B /* export.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,11 @@
 		8A5A900E1C4CCF240043E724 /* AnarLQRCodeGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnarLQRCodeGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5A90121C4CCF240043E724 /* AnarLQRCodeGeneratorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnarLQRCodeGeneratorUITests.m; sourceTree = "<group>"; };
 		8A5A90141C4CCF240043E724 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A5A90201C4CD04E0043E724 /* Convert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Convert.png; sourceTree = "<group>"; };
+		8A5A90281C4CD17A0043E724 /* NSImage+QRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+QRCode.h"; sourceTree = "<group>"; };
+		8A5A90291C4CD17A0043E724 /* NSImage+QRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QRCode.m"; sourceTree = "<group>"; };
+		8A5A902B1C4CD5690043E724 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8A9C2D261C4CE6CC0064227B /* export.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = export.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5A902C1C4CD5690043E724 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +86,7 @@
 		8A5A8FE71C4CCF240043E724 = {
 			isa = PBXGroup;
 			children = (
+				8A5A902B1C4CD5690043E724 /* AVFoundation.framework */,
 				8A5A8FF21C4CCF240043E724 /* AnarLQRCodeGenerator */,
 				8A5A90061C4CCF240043E724 /* AnarLQRCodeGeneratorTests */,
 				8A5A90111C4CCF240043E724 /* AnarLQRCodeGeneratorUITests */,
@@ -96,6 +107,10 @@
 		8A5A8FF21C4CCF240043E724 /* AnarLQRCodeGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				8A5A90281C4CD17A0043E724 /* NSImage+QRCode.h */,
+				8A5A90291C4CD17A0043E724 /* NSImage+QRCode.m */,
+				8A9C2D261C4CE6CC0064227B /* export.png */,
+				8A5A90201C4CD04E0043E724 /* Convert.png */,
 				8A5A8FF31C4CCF240043E724 /* AppDelegate.h */,
 				8A5A8FF41C4CCF240043E724 /* AppDelegate.m */,
 				8A5A8FF91C4CCF240043E724 /* Assets.xcassets */,
@@ -235,8 +250,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A5A90211C4CD04E0043E724 /* Convert.png in Resources */,
 				8A5A8FFA1C4CCF240043E724 /* Assets.xcassets in Resources */,
 				8A5A8FFD1C4CCF240043E724 /* MainMenu.xib in Resources */,
+				8A9C2D271C4CE6CC0064227B /* export.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A5A8FF81C4CCF240043E724 /* main.m in Sources */,
+				8A5A902A1C4CD17A0043E724 /* NSImage+QRCode.m in Sources */,
 				8A5A8FF51C4CCF240043E724 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +413,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AnarLQRCodeGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digiarty.AnarLQRCodeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -407,6 +426,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AnarLQRCodeGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.digiarty.AnarLQRCodeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -483,6 +503,7 @@
 				8A5A90191C4CCF240043E724 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A5A901A1C4CCF240043E724 /* Build configuration list for PBXNativeTarget "AnarLQRCodeGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +512,7 @@
 				8A5A901C1C4CCF240043E724 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A5A901D1C4CCF240043E724 /* Build configuration list for PBXNativeTarget "AnarLQRCodeGeneratorUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +521,7 @@
 				8A5A901F1C4CCF240043E724 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

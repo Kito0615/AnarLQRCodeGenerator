@@ -7,9 +7,24 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "NSImage+QRCode.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 
+@property (weak) IBOutlet NSSlider *fgRed;
+@property (weak) IBOutlet NSSlider *fgGreen;
+@property (weak) IBOutlet NSSlider *fgBlue;
+
+@property (weak) IBOutlet NSSlider *bgRed;
+@property (weak) IBOutlet NSSlider *bgGreen;
+@property (weak) IBOutlet NSSlider *bgBlue;
+
+- (IBAction)generateQRCode:(NSToolbarItem *)sender;
+- (IBAction)exportQRCode:(NSToolbarItem *)sender;
+
+@property (unsafe_unretained) IBOutlet NSTextView *textview;
+
+@property (weak) IBOutlet NSImageView *QRCode;
 @end
 

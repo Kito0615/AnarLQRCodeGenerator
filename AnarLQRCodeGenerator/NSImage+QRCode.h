@@ -8,6 +8,19 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef struct QRCodeColor
+{
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
+} QRCodeForeColor, QRCodeBackgroundColor;
+
 @interface NSImage (QRCode)
+
++ (NSImage *)QRCodeWithText:(NSString *)text;
+
++ (NSImage *)QRCodeWithText:(NSString *)text size:(CGFloat)size;
+
++ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor;
 
 @end
