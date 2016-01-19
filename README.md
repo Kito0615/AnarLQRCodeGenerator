@@ -5,7 +5,7 @@
 #####
 ##Installation
 ###1.git clone [https://github.com/Kito0615/AnarQRCodeGenerator.git](https://github.com/Kito0615/AnarQRCodeGenerator.git)
-#### cd AnarLQRCodeGenerator
+#### cd `AnarLQRCodeGenerator/AnarLQRCodeGenerator`
 #### cp `NSImage+QRCode.h` `NSImage+QRCode.m` `/to/your/project`
 #### Add the two files into your project
 #### `#import NSImage+QRCode.h` Then you can use it to Create your own QRCode.
