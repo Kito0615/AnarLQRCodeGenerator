@@ -11,4 +11,4 @@
 #### `#import NSImage+QRCode.h` Then you can use it to Create your own QRCode.
 ###2.download [AnarLQRCodeGenerator.dmg](https://github.com/Kito0615/AnarLQRCodeGenerator/blob/master/anarlqrcodegenerator.dmg?raw=true)
 ###3.you can also scan This QRCode 
-![](https://github.com/Kito0615/AnarQRCodeGenerator/raw/master/QRCode.png)
+![](https://github.com/Kito0615/AnarLQRCodeGenerator/raw/master/QRCode.png)  
