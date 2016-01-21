@@ -22,5 +22,6 @@ typedef struct QRCodeColor
 + (NSImage *)QRCodeWithText:(NSString *)text size:(CGFloat)size;
 
 + (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor;
++ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor userIcon:(NSImage *)icon;
 
 @end

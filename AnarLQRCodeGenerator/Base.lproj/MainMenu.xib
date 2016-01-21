@@ -745,7 +745,7 @@
                                         <rect key="frame" x="75" y="182" width="92" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <animations/>
-                                        <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="h5H-b8-sAn"/>
+                                        <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="255" tickMarkPosition="above" sliderType="linear" id="h5H-b8-sAn"/>
                                         <connections>
                                             <action selector="sliderValueChanged:" target="Voe-Tx-rLC" id="Sq4-wq-EcI"/>
                                         </connections>
@@ -754,7 +754,7 @@
                                         <rect key="frame" x="75" y="135" width="92" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <animations/>
-                                        <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="b0S-Nv-ENc"/>
+                                        <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="255" tickMarkPosition="above" sliderType="linear" id="b0S-Nv-ENc"/>
                                         <connections>
                                             <action selector="sliderValueChanged:" target="Voe-Tx-rLC" id="gyB-q0-sVE"/>
                                         </connections>
@@ -763,7 +763,7 @@
                                         <rect key="frame" x="75" y="84" width="92" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <animations/>
-                                        <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="ILA-Zz-IqO"/>
+                                        <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="255" tickMarkPosition="above" sliderType="linear" id="ILA-Zz-IqO"/>
                                         <connections>
                                             <action selector="sliderValueChanged:" target="Voe-Tx-rLC" id="5QQ-Tm-Ij5"/>
                                         </connections>
@@ -902,18 +902,25 @@
                             <action selector="exportQRCode:" target="Voe-Tx-rLC" id="1MW-Tr-nQc"/>
                         </connections>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="86F81127-D981-461D-83DA-859752008E58" label="Add" paletteLabel="Add" tag="-1" image="Add" id="fD8-lx-LxQ">
+                        <connections>
+                            <action selector="addIcon:" target="Voe-Tx-rLC" id="ofC-h0-Nsr"/>
+                        </connections>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="4iP-gs-ltl"/>
+                    <toolbarItem reference="fD8-lx-LxQ"/>
                     <toolbarItem reference="ISF-pT-bjB"/>
                     <toolbarItem reference="Q7H-ay-h8Q"/>
                     <toolbarItem reference="7uc-zs-Ukl"/>
                 </defaultToolbarItems>
             </toolbar>
-            <point key="canvasLocation" x="-326.5" y="323"/>
+            <point key="canvasLocation" x="-243.5" y="335"/>
         </window>
     </objects>
     <resources>
+        <image name="Add" width="72" height="72"/>
         <image name="Convert" width="72" height="72"/>
         <image name="export" width="48" height="48"/>
     </resources>

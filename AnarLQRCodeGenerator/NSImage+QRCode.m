@@ -115,4 +115,45 @@ void ProviderReleaseData(void * info, const void * data, size_t size)
     return QRImage;
 }
 
++ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor userIcon:(NSImage *)icon
+{
+    NSImage * codeImage = [NSImage QRCodeWithText:text QRCodeSize:size QRCodeForeColor:foreColor QRCodeBackgroundColor:backgroundColor];
+    
+    const int imageWidth = codeImage.size.width;
+    const int imageHeight = codeImage.size.height;
+    
+    size_t bytesPerRow = imageWidth * 4;
+    
+    uint32_t * rgbImageRef = (uint32_t *)malloc(bytesPerRow * imageHeight);
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGContextRef context = CGBitmapContextCreate(rgbImageRef, imageWidth, imageHeight, 8, bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaNoneSkipLast);
+    
+    CGImageSourceRef imageSourceRef = CGImageSourceCreateWithData((CFDataRef)[codeImage TIFFRepresentation], NULL);
+    
+    CGImageRef imageRef = CGImageSourceCreateImageAtIndex(imageSourceRef, 0, NULL);
+    
+    CGImageSourceRef iconSourceRef = CGImageSourceCreateWithData((CFDataRef)[icon TIFFRepresentation], NULL);
+    CGImageRef iconRef = CGImageSourceCreateImageAtIndex(iconSourceRef, 0, NULL);
+    
+    CGContextDrawImage(context, CGRectMake(0, 0, imageWidth, imageHeight), imageRef);
+    
+    int iconW = 45;
+    int iconH = 45;
+    
+    int iconX = (imageWidth - iconW) / 2;
+    int iconY = (imageHeight - iconH) / 2;
+    
+    CGContextDrawImage(context, CGRectMake(iconX, iconY, iconW, iconH), iconRef);
+    
+    CGDataProviderRef dataProvider = CGDataProviderCreateWithData(NULL, rgbImageRef, bytesPerRow * imageHeight, ProviderReleaseData);
+    CGImageRef outputImageRef = CGImageCreate(imageWidth, imageHeight, 8, 32, bytesPerRow, colorSpace, kCGImageAlphaLast | kCGBitmapByteOrder32Little, dataProvider, NULL, true, kCGRenderingIntentDefault);
+    CGDataProviderRelease(dataProvider);
+    
+    NSImage * outputImage = [[NSImage alloc] initWithCGImage:outputImageRef size:CGSizeMake(imageWidth, imageHeight)];
+    
+    return outputImage;
+    
+    
+}
+
 @end

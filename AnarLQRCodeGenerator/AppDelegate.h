@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NSImage+QRCode.h"
+#import "MacAddress.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -26,5 +27,6 @@
 @property (unsafe_unretained) IBOutlet NSTextView *textview;
 
 @property (weak) IBOutlet NSImageView *QRCode;
+- (IBAction)addIcon:(NSToolbarItem *)sender;
 @end
 
