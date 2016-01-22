@@ -28,5 +28,6 @@
 
 @property (weak) IBOutlet NSImageView *QRCode;
 - (IBAction)addIcon:(NSToolbarItem *)sender;
+- (IBAction)removeIcon:(NSToolbarItem *)sender;
 @end
 

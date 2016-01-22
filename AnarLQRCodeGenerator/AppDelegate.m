@@ -107,6 +107,13 @@
     
 }
 
+- (IBAction)removeIcon:(NSToolbarItem *)sender {
+    if (_icon) {
+        _icon = nil;
+        self.QRCode.image = [self createQRCode];
+    }
+}
+
 - (NSImage *)createQRCode
 {
     QRCodeForeColor foreColor;

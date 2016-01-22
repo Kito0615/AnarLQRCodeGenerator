@@ -907,10 +907,16 @@
                             <action selector="addIcon:" target="Voe-Tx-rLC" id="ofC-h0-Nsr"/>
                         </connections>
                     </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="7D5B4566-4BA2-42DF-B9EC-1B8A24DD1D70" label="Remove" paletteLabel="Remove" tag="-1" image="Cancel" id="Zv6-Qv-Vsi">
+                        <connections>
+                            <action selector="removeIcon:" target="Voe-Tx-rLC" id="7vh-EZ-qg7"/>
+                        </connections>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="4iP-gs-ltl"/>
                     <toolbarItem reference="fD8-lx-LxQ"/>
+                    <toolbarItem reference="Zv6-Qv-Vsi"/>
                     <toolbarItem reference="ISF-pT-bjB"/>
                     <toolbarItem reference="Q7H-ay-h8Q"/>
                     <toolbarItem reference="7uc-zs-Ukl"/>
@@ -921,6 +927,7 @@
     </objects>
     <resources>
         <image name="Add" width="72" height="72"/>
+        <image name="Cancel" width="72" height="72"/>
         <image name="Convert" width="72" height="72"/>
         <image name="export" width="48" height="48"/>
     </resources>

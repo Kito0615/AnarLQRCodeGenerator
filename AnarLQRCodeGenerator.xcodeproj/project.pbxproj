@@ -18,6 +18,7 @@
 		8A5A902A1C4CD17A0043E724 /* NSImage+QRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A90291C4CD17A0043E724 /* NSImage+QRCode.m */; };
 		8A5A902C1C4CD5690043E724 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5A902B1C4CD5690043E724 /* AVFoundation.framework */; };
 		8A806E3D1C50B52300026FE9 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A806E3C1C50B52300026FE9 /* Add.png */; };
+		8A806E841C50E7FD00026FE9 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A806E831C50E7FD00026FE9 /* Cancel.png */; };
 		8A9C2D271C4CE6CC0064227B /* export.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A9C2D261C4CE6CC0064227B /* export.png */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		8A5A90291C4CD17A0043E724 /* NSImage+QRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+QRCode.m"; sourceTree = "<group>"; };
 		8A5A902B1C4CD5690043E724 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8A806E3C1C50B52300026FE9 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
+		8A806E831C50E7FD00026FE9 /* Cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cancel.png; sourceTree = "<group>"; };
 		8A9C2D261C4CE6CC0064227B /* export.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = export.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +117,7 @@
 				8A5A90281C4CD17A0043E724 /* NSImage+QRCode.h */,
 				8A5A90291C4CD17A0043E724 /* NSImage+QRCode.m */,
 				8A806E3C1C50B52300026FE9 /* Add.png */,
+				8A806E831C50E7FD00026FE9 /* Cancel.png */,
 				8A9C2D261C4CE6CC0064227B /* export.png */,
 				8A5A90201C4CD04E0043E724 /* Convert.png */,
 				8A5A8FF31C4CCF240043E724 /* AppDelegate.h */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A5A90211C4CD04E0043E724 /* Convert.png in Resources */,
+				8A806E841C50E7FD00026FE9 /* Cancel.png in Resources */,
 				8A806E3D1C50B52300026FE9 /* Add.png in Resources */,
 				8A5A8FFA1C4CCF240043E724 /* Assets.xcassets in Resources */,
 				8A5A8FFD1C4CCF240043E724 /* MainMenu.xib in Resources */,
