@@ -23,10 +23,6 @@
     // Insert code here to initialize your application
     
     self.textview.font = [NSFont systemFontOfSize:24];
-    
-    NSString * macNameAndAddress = [MacAddress macAddress];
-    
-    NSLog(@"%@", macNameAndAddress);
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
