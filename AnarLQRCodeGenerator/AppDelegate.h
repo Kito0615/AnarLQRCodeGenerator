@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NSImage+QRCode.h"
-#import "MacAddress.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A3C2A641C4F80D500C59125 /* MacAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C2A631C4F80D500C59125 /* MacAddress.m */; };
 		8A5A8FF51C4CCF240043E724 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A8FF41C4CCF240043E724 /* AppDelegate.m */; };
 		8A5A8FF81C4CCF240043E724 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5A8FF71C4CCF240043E724 /* main.m */; };
 		8A5A8FFA1C4CCF240043E724 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A5A8FF91C4CCF240043E724 /* Assets.xcassets */; };
@@ -40,8 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8A3C2A621C4F80D500C59125 /* MacAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacAddress.h; sourceTree = "<group>"; };
-		8A3C2A631C4F80D500C59125 /* MacAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacAddress.m; sourceTree = "<group>"; };
 		8A5A8FF01C4CCF240043E724 /* AnarLQRCodeGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnarLQRCodeGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5A8FF31C4CCF240043E724 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A5A8FF41C4CCF240043E724 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,8 +119,6 @@
 				8A5A90201C4CD04E0043E724 /* Convert.png */,
 				8A5A8FF31C4CCF240043E724 /* AppDelegate.h */,
 				8A5A8FF41C4CCF240043E724 /* AppDelegate.m */,
-				8A3C2A621C4F80D500C59125 /* MacAddress.h */,
-				8A3C2A631C4F80D500C59125 /* MacAddress.m */,
 				8A5A8FF91C4CCF240043E724 /* Assets.xcassets */,
 				8A5A8FFB1C4CCF240043E724 /* MainMenu.xib */,
 				8A5A8FFE1C4CCF240043E724 /* Info.plist */,
@@ -293,7 +288,6 @@
 			files = (
 				8A5A8FF81C4CCF240043E724 /* main.m in Sources */,
 				8A5A902A1C4CD17A0043E724 /* NSImage+QRCode.m in Sources */,
-				8A3C2A641C4F80D500C59125 /* MacAddress.m in Sources */,
 				8A5A8FF51C4CCF240043E724 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
