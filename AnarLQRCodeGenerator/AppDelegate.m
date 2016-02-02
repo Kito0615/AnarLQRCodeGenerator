@@ -39,6 +39,10 @@
     
     NSImage * QRCode = [self createQRCode];
     
+    if (!QRCode) {
+        return;
+    }
+    
     _openPanel = [NSOpenPanel openPanel];
     [_openPanel setAllowsMultipleSelection:NO];
     [_openPanel setCanChooseFiles:NO];
@@ -112,6 +116,17 @@
 
 - (NSImage *)createQRCode
 {
+    if (self.textview.string.length == 0) {
+        NSAlert * alert = [[NSAlert alloc] init];
+        [alert setInformativeText:@"请输入要生成二维码的内容!"];
+        [alert addButtonWithTitle:@"确定"];
+        [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+            
+        }];
+        
+        return nil;
+        
+    }
     QRCodeForeColor foreColor;
     foreColor.red = self.fgRed.floatValue;
     foreColor.green = self.fgGreen.floatValue;

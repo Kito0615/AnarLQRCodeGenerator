@@ -87,6 +87,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A4468021C60A724006A546F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8A806E3C1C50B52300026FE9 /* Add.png */,
+				8A806E831C50E7FD00026FE9 /* Cancel.png */,
+				8A9C2D261C4CE6CC0064227B /* export.png */,
+				8A5A90201C4CD04E0043E724 /* Convert.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		8A4468031C60A732006A546F /* NSImage+QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				8A5A90281C4CD17A0043E724 /* NSImage+QRCode.h */,
+				8A5A90291C4CD17A0043E724 /* NSImage+QRCode.m */,
+			);
+			name = "NSImage+QRCode";
+			sourceTree = "<group>";
+		};
 		8A5A8FE71C4CCF240043E724 = {
 			isa = PBXGroup;
 			children = (
@@ -111,12 +131,8 @@
 		8A5A8FF21C4CCF240043E724 /* AnarLQRCodeGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				8A5A90281C4CD17A0043E724 /* NSImage+QRCode.h */,
-				8A5A90291C4CD17A0043E724 /* NSImage+QRCode.m */,
-				8A806E3C1C50B52300026FE9 /* Add.png */,
-				8A806E831C50E7FD00026FE9 /* Cancel.png */,
-				8A9C2D261C4CE6CC0064227B /* export.png */,
-				8A5A90201C4CD04E0043E724 /* Convert.png */,
+				8A4468021C60A724006A546F /* images */,
+				8A4468031C60A732006A546F /* NSImage+QRCode */,
 				8A5A8FF31C4CCF240043E724 /* AppDelegate.h */,
 				8A5A8FF41C4CCF240043E724 /* AppDelegate.m */,
 				8A5A8FF91C4CCF240043E724 /* Assets.xcassets */,
