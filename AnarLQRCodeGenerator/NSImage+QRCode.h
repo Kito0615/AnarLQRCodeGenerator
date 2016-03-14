@@ -49,7 +49,7 @@ typedef struct QRCodeColor
  *
  *  @return 二维码图片
  */
-+ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor;
++ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(NSColor *)foreColor QRCodeBackgroundColor:(NSColor *)backgroundColor;
 
 /**
  *  文本和图标生成指定大小和前、背景颜色的二维码
@@ -62,6 +62,6 @@ typedef struct QRCodeColor
  *
  *  @return 二维码图片
  */
-+ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor userIcon:(NSImage *)icon;
++ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(NSColor *)foreColor QRCodeBackgroundColor:(NSColor *)backgroundColor userIcon:(NSImage *)icon;
 
 @end

@@ -10,6 +10,9 @@
 
 @interface AppDelegate ()
 {
+    NSColor * _bgcolor;
+    NSColor * _fgcolor;
+    
     NSOpenPanel * _openPanel;
     NSImage * _icon;
 }
@@ -23,6 +26,9 @@
     // Insert code here to initialize your application
     
     self.textview.font = [NSFont systemFontOfSize:24];
+    _bgcolor = self.backgroundColorWell.color;
+    _fgcolor = self.foregroundColorWell.color;
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -64,11 +70,6 @@
     
 }
 
-- (IBAction)sliderValueChanged:(NSSlider *)slider
-{
-    self.QRCode.image = [self createQRCode];
-}
-
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
 {
     return YES;
@@ -88,17 +89,6 @@
             NSString * pngPath = [[[_openPanel URLs] lastObject] path];
             
             _icon = [[NSImage alloc] initWithContentsOfFile:pngPath];
-            
-            
-            QRCodeForeColor foreColor;
-            foreColor.red = self.fgRed.floatValue;
-            foreColor.green = self.fgGreen.floatValue;
-            foreColor.blue = self.fgBlue.floatValue;
-            
-            QRCodeBackgroundColor backgroundColor;
-            backgroundColor.red = self.bgRed.floatValue;
-            backgroundColor.green = self.bgGreen.floatValue;
-            backgroundColor.blue = self.bgBlue.floatValue;
             
             self.QRCode.image = [self createQRCode];
             
@@ -121,29 +111,33 @@
         [alert setInformativeText:@"请输入要生成二维码的内容!"];
         [alert addButtonWithTitle:@"确定"];
         [alert beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse returnCode) {
+            NSLog(@"%ld", returnCode);
             
         }];
         
         return nil;
         
     }
-    QRCodeForeColor foreColor;
-    foreColor.red = self.fgRed.floatValue;
-    foreColor.green = self.fgGreen.floatValue;
-    foreColor.blue = self.fgBlue.floatValue;
-    
-    QRCodeBackgroundColor backgroundColor;
-    backgroundColor.red = self.bgRed.floatValue;
-    backgroundColor.green = self.bgGreen.floatValue;
-    backgroundColor.blue = self.bgBlue.floatValue;
     
     if (!_icon) {
-        NSImage * QRCode = [NSImage QRCodeWithText:self.textview.string QRCodeSize:self.QRCode.bounds.size.width QRCodeForeColor:foreColor QRCodeBackgroundColor:backgroundColor];
+        NSImage * QRCode = [NSImage QRCodeWithText:self.textview.string QRCodeSize:self.QRCode.bounds.size.width QRCodeForeColor:_fgcolor QRCodeBackgroundColor:_bgcolor];
         return QRCode;
     } else {
-        NSImage * QRCode = [NSImage QRCodeWithText:self.textview.string QRCodeSize:self.QRCode.bounds.size.width QRCodeForeColor:foreColor QRCodeBackgroundColor:backgroundColor userIcon:_icon];
+        NSImage * QRCode = [NSImage QRCodeWithText:self.textview.string QRCodeSize:self.QRCode.bounds.size.width QRCodeForeColor:_fgcolor QRCodeBackgroundColor:_bgcolor userIcon:_icon];
         return QRCode;
     }
+}
+
+- (void)bgColorAction:(NSColorWell *)sender
+{
+    _bgcolor = sender.color;
+//    self.QRCode.image = [self createQRCode];
+}
+
+- (void)fgColorAction:(NSColorWell *)sender
+{
+    _fgcolor = sender.color;
+//    self.QRCode.image = [self createQRCode];
 }
 
 @end

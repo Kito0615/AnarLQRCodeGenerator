@@ -70,7 +70,7 @@ void ProviderReleaseData(void * info, const void * data, size_t size)
 }
 
 
-+ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor
++ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(NSColor *)foreColor QRCodeBackgroundColor:(NSColor *)backgroundColor
 {
     NSImage * img = [NSImage QRCodeWithText:text size:size];
     
@@ -95,14 +95,14 @@ void ProviderReleaseData(void * info, const void * data, size_t size)
     for (int i = 0; i < pixelNum; i ++, pCurPtr ++) {
         if ((*pCurPtr & 0xFFFFFF00) < 0x99999900) {
             uint8_t * ptr = (uint8_t *)pCurPtr;
-            ptr[3] = foreColor.red;
-            ptr[2] = foreColor.green;
-            ptr[1] = foreColor.blue;
+            ptr[3] = foreColor.redComponent * 255.0;
+            ptr[2] = foreColor.greenComponent * 255.0;
+            ptr[1] = foreColor.blueComponent * 255.0;
         } else {
             uint8_t * ptr = (uint8_t *)pCurPtr;
-            ptr[3] = backgroundColor.red;
-            ptr[2] = backgroundColor.green;
-            ptr[1] = backgroundColor.blue;
+            ptr[3] = backgroundColor.redComponent * 255.0;
+            ptr[2] = backgroundColor.greenComponent * 255.0;
+            ptr[1] = backgroundColor.blueComponent * 255.0;
         }
     }
     
@@ -115,7 +115,7 @@ void ProviderReleaseData(void * info, const void * data, size_t size)
     return QRImage;
 }
 
-+ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor userIcon:(NSImage *)icon
++ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(NSColor *)foreColor QRCodeBackgroundColor:(NSColor *)backgroundColor userIcon:(NSImage *)icon
 {
     NSImage * codeImage = [NSImage QRCodeWithText:text QRCodeSize:size QRCodeForeColor:foreColor QRCodeBackgroundColor:backgroundColor];
     

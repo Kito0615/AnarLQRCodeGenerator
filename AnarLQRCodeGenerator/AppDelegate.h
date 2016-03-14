@@ -11,14 +11,10 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-
-@property (weak) IBOutlet NSSlider *fgRed;
-@property (weak) IBOutlet NSSlider *fgGreen;
-@property (weak) IBOutlet NSSlider *fgBlue;
-
-@property (weak) IBOutlet NSSlider *bgRed;
-@property (weak) IBOutlet NSSlider *bgGreen;
-@property (weak) IBOutlet NSSlider *bgBlue;
+- (IBAction)bgColorAction:(NSColorWell *)sender;
+- (IBAction)fgColorAction:(NSColorWell *)sender;
+@property (weak) IBOutlet NSColorWell *foregroundColorWell;
+@property (weak) IBOutlet NSColorWell *backgroundColorWell;
 
 - (IBAction)generateQRCode:(NSToolbarItem *)sender;
 - (IBAction)exportQRCode:(NSToolbarItem *)sender;
