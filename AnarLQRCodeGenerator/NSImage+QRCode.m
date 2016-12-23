@@ -156,4 +156,19 @@ void ProviderReleaseData(void * info, const void * data, size_t size)
     
 }
 
++ (NSString *)QRCodeContentWithQRCodeImage:(NSImage *)qrCodeImage
+{
+    CIDetector * detector = [CIDetector detectorOfType:CIDetectorTypeQRCode
+                                               context:nil
+                                               options:nil];
+    CIImage * ciimage = [CIImage imageWithData:[qrCodeImage TIFFRepresentation]];
+    NSArray * features = [detector featuresInImage:ciimage];
+    for (CIFeature * feature in features) {
+        if ([[feature type] isEqualToString:CIFeatureTypeQRCode]) {
+            return [(CIQRCodeFeature *)feature messageString];
+        }
+    }
+    return @"Get content failed.";
+}
+
 @end

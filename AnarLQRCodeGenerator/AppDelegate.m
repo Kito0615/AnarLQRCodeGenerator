@@ -104,6 +104,21 @@
     }
 }
 
+- (IBAction)openQRCode:(id)sender {
+    NSOpenPanel * op = [NSOpenPanel openPanel];
+    [op setAllowsMultipleSelection:NO];
+    [op setAllowedFileTypes:@[@"jpg", @"jpeg", @"png"]];
+    [op setCanChooseDirectories:NO];
+    [op beginSheetModalForWindow:self.window completionHandler:^(NSInteger result) {
+        if (result == NSModalResponseOK) {
+            NSURL * imgURL = [op.URLs firstObject];
+            NSImage * qrCode = [[NSImage alloc] initWithContentsOfURL:imgURL];
+            NSString * content = [NSImage QRCodeContentWithQRCodeImage:qrCode];
+            self.textview.string = [NSString stringWithFormat:@"识别结果:\n%@", content];
+        }
+    }];
+}
+
 - (NSImage *)createQRCode
 {
     if (self.textview.string.length == 0) {
