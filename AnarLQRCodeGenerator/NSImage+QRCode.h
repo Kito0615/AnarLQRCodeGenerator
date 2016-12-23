@@ -64,6 +64,13 @@ typedef struct QRCodeColor
  */
 + (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(NSColor *)foreColor QRCodeBackgroundColor:(NSColor *)backgroundColor userIcon:(NSImage *)icon;
 
+/**
+ *  识别二维码图片内容
+ *
+ *  @param qrCodeImage 二维码图片
+ *
+ *  @return 二维码内容
+ */
 + (NSString *)QRCodeContentWithQRCodeImage:(NSImage *)qrCodeImage;
 
 @end
