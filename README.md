@@ -8,7 +8,7 @@ cd `AnarLQRCodeGenerator/AnarLQRCodeGenerator`
 cp `NSImage+QRCode.h` `NSImage+QRCode.m` `/to/your/project`
 Add the two files into your project
 `#import NSImage+QRCode.h` Then you can use it to Create your own QRCode.
-#### There are 4 method to create QRCode image.
+#### There are some methods to create QRCode image.
 1)`+ (NSImage *)QRCodeWithText:(NSString *)text;`
 
 2)`+ (NSImage *)QRCodeWithText:(NSString *)text size:(CGFloat)size;`
@@ -18,6 +18,8 @@ Add the two files into your project
 4)`+ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor userIcon:(NSImage *)icon;`
 
 **23/12/2016 Update**
+
+####This method used to recognise QRCode image content
 
 5)`+ (NSString *)QRCodeContentWithQRCodeImage:(NSImage *)qrCodeImage;`
 
@@ -44,6 +46,8 @@ cp `NSImage+QRCode.h` `NSImage+QRCode.m` `/to/your/project`（将`NSImage+QRCode
 4).`+ (NSImage *)QRCodeWithText:(NSString *)text QRCodeSize:(CGFloat)size QRCodeForeColor:(QRCodeForeColor)foreColor QRCodeBackgroundColor:(QRCodeBackgroundColor)backgroundColor userIcon:(NSImage *)icon;` 设置文本生成二维码的前景色和背景色，并在中间设置头像
 
 2016-12-23更新
+
+####这个方法用来识别二维码内容
 
 5).`+ (NSString *)QRCodeContentWithQRCodeImage:(NSImage *)qrCodeImage;` 识别给定二维码图片内容
 
